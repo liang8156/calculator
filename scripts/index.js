@@ -36,8 +36,3 @@ function run(symbol) {
     }
 };
 
-function runEquals() {
-    var Equals = eval(document.calculator.display.value);
-    document.calculator.display.value = Equals;
-};
-
