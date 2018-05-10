@@ -14,12 +14,33 @@
 </head>
 
 <body class=total>
-  <div class=title>萬年曆
-    <span class=name>by AlexLiang</span>
+  <div class="contained-fluid">
+    <form name="calculator" id="bigWell" class="well">
+      <input name="display" id="numberDisplay" class="well" value="">
+      <input type="button" id="AC" class="well buttons" value="AC" onclick="runAC()">
+      <input type="button" id="CE" class="well buttons" value="CE" onclick="runCE()">
+      <input type="button" id="divide" class="well buttons" value="/" onclick="runDivide()">
+      <input type="button" id="remainder" class="well buttons" value="%" onclick="runRemainder()">
+      <input type="button" id="7" class="well buttons" value="7" onclick="run7()">
+      <input type="button" id="8" class="well buttons" value="8" onclick="run8()">
+      <input type="button" id="9" class="well buttons" value="9" onclick="run9()">
+      <input type="button" id="time" class="well buttons" value="*" onclick="runTime()">
+      <input type="button" id="4" class="well buttons" value="4" onclick="run4()">
+      <input type="button" id="5" class="well buttons" value="5" onclick="run5()">
+      <input type="button" id="6" class="well buttons" value="6" onclick="run6()">
+      <input type="button" id="minus" class="well buttons" value="-" onclick="runMinus()">
+      <input type="button" id="1" class="well buttons" value="1" onclick="run1()">
+      <input type="button" id="2" class="well buttons" value="2" onclick="run2()">
+      <input type="button" id="3" class="well buttons" value="3" onclick="run3()">
+      <input type="button" id="add" class="well buttons" value="+" onclick="runPlus()">
+      <input type="button" id="dot" class="well buttons" value="." onclick="runDot()">
+      <input type="button" id="zero" class="well buttons" value="0" onclick="run0()">
+      <input type="button" id="equals" class="well buttons" value="=" onclick="runEquals()">
+      <input type="button" id="empty" class="well buttons" value="❤️" text="">
+    </form>
+
   </div>
-  <hr/>
-  <p id="selectYM"></p>
-  <p id="calendar"></p>
+
   <!-- Scripts -->
   <script src="scripts/index.js"></script>
 </body>

@@ -1,77 +1,77 @@
-function select_value() {
-    year = Number(document.getElementById("selectYear").value)
-    month = Number(document.getElementById("selectMonth").value)
-    calendar(year, month);
-}
+function runAC() {
+    document.calculator.display.value = "";
+};
 
-function drawCal(inc) {
-    month += inc;
-    if (month == 0) {
-        month = 12;
-        year--;
-    }
-    else if (month == 13) {
-        month = 1;
-        year++;
-    }
-    calendar(year, month);
-}
+function runCE() {
+    document.calculator.display.value = document.calculator.display.value.slice(0, -1);
+};
 
-function calendar(yr, mth) {
+function run1() {
+    document.calculator.display.value += "1";
+};
 
-    var dt = new Date(yr, mth - 1, 1);
-    var wd = dt.getDay();               //判斷是星期幾 於39行用來畫月曆
-    cal = '<table>';
-    cal += '<tr class=calendarTitle>';
-    cal += '<th  colspan=5>' + yr + '年' + mth + '月' +
-        '<th onclick="drawCal(-1)">∧<th onclick="drawCal(1)">∨';
-    cal += '</tr>';
-    cal += '<tr>';
-    cal += '<th>日</th><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th>'
-    cal += '</tr>';
+function run2() {
+    document.calculator.display.value += "2";
+};
+function run3() {
+    document.calculator.display.value += "3";
+};
 
-    mth--;
-    cal += '<tr>';
-    for (; wd > 0; wd--) {
-        cal += '<td/>'; //用來補月數剛開始的空格
-    }
-    for (i = 1; i < 32;) {
-        dt = new Date(yr, mth, i);
-        wd = dt.getDay();
-        if (dt.getMonth() != mth) {
-            //判斷月數 若不符合跳出(例如4/31會變成5/1 此時4!=5 就會跳出) 
-            break;
-        }
-        if (wd == 0) {
-            cal += '<tr>';
-        }
-        cal += '<td>' + i + '</td>';
-        i++;
-        if (wd == 6) {
-            cal += '</tr>';        //wd==0 和wd==6之間由<tr></tr>刮起來 由此循環
-        }
-    }
-    cal += '</tr>';
-    cal += '</table>';
-    document.getElementById('calendar').innerHTML = cal;
-}
+function run4() {
+    document.calculator.display.value += "4";
+};
 
-selectDay = '<select  id="selectYear" onchange="select_value();">'
-for (i = 2000; i < 2030; i++) {
-    selectDay += '<option value="' + i + '">' + i + '</option>';
-}
-selectDay += '</select>'
+function run5() {
+    document.calculator.display.value += "5";
+};
 
-selectDay += '<select  id="selectMonth" onchange="select_value();">'
-for (i = 1; i <= 12; i++) {
-    selectDay += '<option value="' + i + '">' + i + '</option>';
-}
-selectDay += '</select>'
-document.getElementById('selectYM').innerHTML = selectDay;
 
-var td = new Date();           //初始值,剛加入未調的得到的初始日期
-var year = td.getFullYear();
-var month = td.getMonth() + 1; //因為1月時是從0開始算 故給值時月數+1
-calendar(year, month);
+function run6() {
+    document.display.value += "6";
+};
 
+function run7() {
+    document.calculator.display.value += "7";
+};
+
+function run8() {
+    document.calculator.display.value += "8";
+};
+
+function run9() {
+    document.calculator.display.value += "9";
+};
+
+function run0() {
+    document.calculator.display.value += "0";
+};
+
+function runDot() {
+    document.calculator.display.value += ".";
+};
+
+function runPlus() {
+    document.calculator.display.value += "+";
+};
+
+function runTime() {
+    document.calculator.display.value += "*";
+};
+
+function runDivide() {
+    document.calculator.display.value += "/";
+};
+
+function runMinus() {
+    document.calculator.display.value += "-";
+};
+
+function runRemainder() {
+    document.calculator.display.value += "%";
+};
+
+function runEquals() {
+    var Equals = eval(document.calculator.display.value);
+    document.calculator.display.value = Equals;
+};
 
