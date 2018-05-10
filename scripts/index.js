@@ -24,6 +24,12 @@ function run(symbol) {
                 document.calculator.display.value = document.calculator.display.value.slice(1, )
             }
             break
+        case '.':
+            console.log(document.calculator.display.value.indexOf("."))
+            if (document.calculator.display.value.indexOf(".") === -1) {
+                document.calculator.display.value += symbol;
+            }
+            break
         default:
             document.calculator.display.value += symbol;
             break
