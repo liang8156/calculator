@@ -17,8 +17,8 @@
   <div class="contained-fluid">
     <form name="calculator" id="bigWell" class="well">
       <input name="display" id="numberDisplay" class="well" value="">
-      <input type="button" id="AC" class="well buttons" value="AC" onclick="runAC()">
-      <input type="button" id="CE" class="well buttons" value="CE" onclick="runCE()">
+      <input type="button" id="AC" class="well buttons" value="AC" onclick="run('AC')">
+      <input type="button" id="CE" class="well buttons" value="CE" onclick="run('CE')">
       <input type="button" id="divide" class="well buttons" value="/" onclick="run('/')">
       <input type="button" id="remainder" class="well buttons" value="%" onclick="run('%')">
       <input type="button" id="7" class="well buttons" value="7" onclick="run('7')">
@@ -35,8 +35,8 @@
       <input type="button" id="add" class="well buttons" value="+" onclick="run('+')">
       <input type="button" id="dot" class="well buttons" value="." onclick="run('.')">
       <input type="button" id="zero" class="well buttons" value="0" onclick="run('0')">
-      <input type="button" id="equals" class="well buttons" value="=" onclick="runEquals()">
-      <input type="button" id="empty" class="well buttons" value="❤️" text="">
+      <input type="button" id="equals" class="well buttons" value="=" onclick="run('=')">
+      <input type="button" id="empty" class="well buttons" value="+/-" onclick="run('+/-')">
     </form>
 
   </div>
