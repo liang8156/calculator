@@ -30,6 +30,9 @@ function run(symbol) {
                 document.calculator.display.value += symbol;
             }
             break
+        case 'xxx':
+            document.calculator.display.value += symbol;
+            break
         default:
             document.calculator.display.value += symbol;
             break
