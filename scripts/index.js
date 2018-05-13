@@ -4,6 +4,12 @@ let calculatorElement = ["AC", "CE", "/", "%",
     "1", "2", "3", "+",
     ".", "0", "=", "empty"]
 
+var calelem = document.createElement("button");
+calelem.class = "buttons";
+calelem.innerHTML = "AC";
+calelem.setAttribute('onclick', "run('AC');");
+document.getElementById("123").appendChild(calelem);
+
 function run(symbol) {
     switch (symbol) {
         case 'AC':
